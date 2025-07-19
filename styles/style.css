@@ -1,4 +1,5 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -98,10 +99,51 @@ main > section{
     width: 100%;
 }
 
+
+/* team and feature related styles */
+.teams{
+    align-items: center;
+
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 8px;
+    gap: 24px;
+   
+}
+
+.our-features{
+    margin-left: 130px;
+    max-width: 530px;
+}
+
+#quick-list{
+    font-weight: 500;
+}
+
+
 /* responsive media queri */
-@media screen and(max-width:576px) {
-    .navbar, .nav-links{
+@media screen and (max-width:576px) {
+    .navbar, 
+    .nav-links,
+    .features,
+    .teams{
         flex-direction: column;
     }
-    
+     .team-img-container{
+        grid-template-columns: 1fr; 
+     } 
+}
+
+
+/* medium size device */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .teams, .features{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 50px auto;
+    }
 }
